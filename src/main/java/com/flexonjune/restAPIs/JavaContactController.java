@@ -38,5 +38,11 @@ public class JavaContactController {
 
     }
 
+    @DeleteMapping(path="/deleteContact/{id}")
+    public ResponseEntity deleteContact(@PathVariable int id){
+        contactDAO.deleteContact(id);
+        return new ResponseEntity<>("delete contact",HttpStatus.CREATED);
+    }
+
 
 }

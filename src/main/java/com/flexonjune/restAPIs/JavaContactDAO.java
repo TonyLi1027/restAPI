@@ -35,8 +35,7 @@ public class JavaContactDAO {
         return tablecontact.get(ID-1);
     }
 
-    public JavaContact deleteContact(JavaContact newContact){
-        tablecontact.remove(newContact);
-        return  newContact;
+    public void deleteContact(int id){
+        tablecontact.remove(id);
     }
 }
