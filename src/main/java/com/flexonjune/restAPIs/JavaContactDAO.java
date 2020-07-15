@@ -30,6 +30,11 @@ public class JavaContactDAO {
         return newContact;
     }
 
+    public JavaContact updateContact(JavaContact newContact, int ID){
+        tablecontact.set(ID-1, newContact);
+        return tablecontact.get(ID-1);
+    }
+
     public JavaContact deleteContact(JavaContact newContact){
         tablecontact.remove(newContact);
         return  newContact;
